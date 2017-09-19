@@ -1,12 +1,11 @@
 {
-  "name": "generator-vue-plugin",
-  "version": "1.1.0",
-  "description": "Yeoman generator generating vue plugin",
+  "name": "@xunlei/generator-vue-plugin",
+  "version": "1.2.0",
+  "description": "🚀 一键生成一个 Vue 插件开源项目，Yeoman generator generating vue plugin",
   "homepage": "https://github.com/jeneser/generator-vue-plugin",
   "author": {
-    "name": "jeneser",
-    "email": "jeneserwang@gmail.com",
-    "url": "https://github.com/jeneser"
+    "name": "赵兵",
+    "email": "zhaobing@xunlei.com"
   },
   "files": [
     "generators"
@@ -48,6 +47,5 @@
       "node": true
     }
   },
-  "repository": "jeneser/generator-vue-plugin",
   "license": "MIT"
 }

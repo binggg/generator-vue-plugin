@@ -1,5 +1,6 @@
-# generator-vue-plugin [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> Yeoman generator generating vue plugin :rocket:
+# generator-vue-plugin 
+
+> 🚀 一键生成一个 Vue 插件开源项目，Yeoman generator generating vue plugin
 
 <br>
 <p align="center">
@@ -7,9 +8,11 @@
 </p>
 <br>
 
+> This project is based on https://github.com/jeneser/generator-vue-plugin
+
 ## Features
 
-Please see our [package.json](https://github.com/jeneser/generator-vue-plugin/blob/master/package.json) for up to date information on what we support.
+Please see our package.json for up to date information on what we support.
 
 - Build library with Rollup + Babel + Uglify
 - Webpack + vue-loader for single file Vue components.
@@ -29,13 +32,13 @@ First, install [Yeoman](http://yeoman.io) and generator-vue-plugin using [npm](h
 
 ```bash
 npm install -g yo
-npm install -g generator-vue-plugin
+npm install -g @xunlei/generator-vue-plugin
 ```
 
 Then generate your new project:
 
 ```bash
-yo vue-plugin
+yo @xunlei/vue-plugin
 ```
 
 ## Getting To Know Yeoman
@@ -51,11 +54,4 @@ Please make sure to read the [Contributing Guide](https://github.com/jeneser/gen
 
 ## License
 
-MIT © Copyright (c) 2017 [Jeneser](https://github.com/jeneser)
-
-[npm-image]: https://badge.fury.io/js/generator-vue-plugin.svg
-[npm-url]: https://npmjs.org/package/generator-vue-plugin
-[travis-image]: https://travis-ci.org/jeneser/generator-vue-plugin.svg?branch=master
-[travis-url]: https://travis-ci.org/jeneser/generator-vue-plugin
-[daviddm-image]: https://david-dm.org/jeneser/generator-vue-plugin.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/jeneser/generator-vue-plugin
+MIT

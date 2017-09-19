@@ -19,6 +19,15 @@ npm run build:library
 
 # build demo
 npm run build:demo
+
+# commit use commitizen
+npm run commit
+
+# pre publish
+npm run prepublish
+
+# generate changelog
+npm run changelog
 ```
 
 ## License

@@ -80,10 +80,15 @@ module.exports = class extends Generator {
     }
   }
 
-  _getCamelCaseName(name) {
+  _filterScopedPackageName (name) {
+    return name.match(/([^/]*\/)?(.*)/)[2]
+  }
 
-    if (name.indexOf('-')) {
-      let _tempName = name.toLowerCase().split('-');
+  _getCamelCaseName(name) {
+    let filteredName = this._filterScopedPackageName(name)
+
+    if (filteredName.indexOf('-')) {
+      let _tempName = filteredName.toLowerCase().split('-');
 
       for(let i = 1; i < _tempName.length; i++) {
         _tempName[i] = _tempName[i].substring(0, 1).toUpperCase() +
@@ -92,9 +97,8 @@ module.exports = class extends Generator {
 
       return _tempName.join('')
     } else {
-      return name
+      return filteredName
     }
-
   }
 
   writing() {
@@ -159,9 +163,9 @@ module.exports = class extends Generator {
   _writingSrc() {
     this.fs.copyTpl(
       this.templatePath('src/_index.js'),
-      this.destinationPath('src/' + this.props.name + '.js'),
+      this.destinationPath('src/' + this._filterScopedPackageName(this.props.name) + '.js'),
       {
-        name: this.props.name,
+        name: this._filterScopedPackageName(this.props.name),
         author: this.props.author,
         license: this.props.license,
         camelCaseName: this._getCamelCaseName(this.props.name),
@@ -178,7 +182,7 @@ module.exports = class extends Generator {
       this.templatePath('demo/_main.js'),
       this.destinationPath('demo/main.js'),
       {
-        name: this.props.name,
+        name: this._filterScopedPackageName(this.props.name),
         camelCaseName: this._getCamelCaseName(this.props.name)
       }
     );
@@ -194,7 +198,7 @@ module.exports = class extends Generator {
       this.templatePath('build/_build.rollup.js'),
       this.destinationPath('build/build.rollup.js'),
       {
-        name: this.props.name,
+        name: this._filterScopedPackageName(this.props.name),
         camelCaseName: this._getCamelCaseName(this.props.name)
       }
     );

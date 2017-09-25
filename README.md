@@ -10,32 +10,24 @@
 
 > This project is based on https://github.com/jeneser/generator-vue-plugin
 
-## Features
+## 特性
 
-Please see our package.json for up to date information on what we support.
+- 集成 Rollup + Babel + Uglify 构建库文件
+- 集成 Webpack + vue-loader ，支持单文件组件（`.vue`）
+- 集成 模块热替换
+- 集成 ESLint
+- 集成 commitizen，规范你的commit提交
+- 支持 自动生成 changelog
 
-- Build library with Rollup + Babel + Uglify
-- Webpack + vue-loader for single file Vue components.
-- State preserving hot-reload
-- State preserving compilation error overlay
-- Lint-on-save with ESLint
-- Source maps
-- JavaScript minified with UglifyJS.
-- HTML minified with html-minifier.
-- CSS across all components extracted into a single file and minified with cssnano.
-
-*For more information on what this generator can do for you, take a look at the [package.json](https://github.com/jeneser/generator-vue-plugin/blob/master/package.json) and [webpack templates](https://github.com/vuejs-templates/webpack)
-
-## Installation
-
-First, install [Yeoman](http://yeoman.io) and generator-vue-plugin using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+## 安装
 
 ```bash
 npm install -g yo
 npm install -g @xunlei/generator-vue-plugin
 ```
 
-Then generate your new project:
+
+## 使用
 
 ```bash
 yo @xunlei/vue-plugin

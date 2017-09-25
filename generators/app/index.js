@@ -80,25 +80,24 @@ module.exports = class extends Generator {
     }
   }
 
-  _filterScopedPackageName (name) {
-    return name.match(/([^/]*\/)?(.*)/)[2]
+  _filterScopedPackageName(name) {
+    return name.match(/([^/]*\/)?(.*)/)[2];
   }
 
   _getCamelCaseName(name) {
-    let filteredName = this._filterScopedPackageName(name)
+    let filteredName = this._filterScopedPackageName(name);
 
     if (filteredName.indexOf('-')) {
       let _tempName = filteredName.toLowerCase().split('-');
 
-      for(let i = 1; i < _tempName.length; i++) {
+      for (let i = 0; i < _tempName.length; i++) {
         _tempName[i] = _tempName[i].substring(0, 1).toUpperCase() +
-        _tempName[i].substring(1)
+        _tempName[i].substring(1);
       }
 
-      return _tempName.join('')
-    } else {
-      return filteredName
+      return _tempName.join('');
     }
+    return filteredName;
   }
 
   writing() {
@@ -122,8 +121,9 @@ module.exports = class extends Generator {
       this.destinationPath('package.json'),
       {
         name: this.props.name,
+        filteredName: this._filterScopedPackageName(this.props.name),
         description: this.props.description,
-        keywords: this.props.keywords.split(","),
+        keywords: this.props.keywords.split(','),
         author: this.props.author,
         email: this.props.email,
         repository: this.props.repository,
@@ -141,6 +141,7 @@ module.exports = class extends Generator {
         name: this.props.name,
         description: this.props.description,
         author: this.props.author,
+        camelCaseName: this._getCamelCaseName(this.props.name),
         year: new Date().getFullYear()
       }
     );
@@ -175,7 +176,6 @@ module.exports = class extends Generator {
   }
 
   _writingDemo() {
-
     mkdirp('demo/static');
 
     this.fs.copyTpl(

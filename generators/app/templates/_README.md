@@ -2,7 +2,27 @@
 
 > <%= description %>
 
-### Development Setup
+
+## Installation
+
+```
+npm i <%= name %> -S
+```
+
+## 使用
+
+### 安装插件
+
+```javascript
+import <%= camelCaseName %> from '<%= name %>'
+
+Vue.use(<%= camelCaseName %>, options)
+```
+
+### 用法
+
+
+## 开发命令
 
 ``` bash
 # install deps

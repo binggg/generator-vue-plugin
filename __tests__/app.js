@@ -8,6 +8,6 @@ describe('generator-vue-plugin:app', () => {
       .withPrompts({name: 'vue-plugin'});
   });
 
-  it('Start test');
-
+  it('Start test', function () {
+  });
 });

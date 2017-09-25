@@ -3,7 +3,7 @@
   "description": "<%= description %>",
   "version": "1.0.0",
   "private": false,
-  "main": "dist/<%= name %>.js",
+  "main": "dist/<%= filteredName %>.js",
   "files": [
     "dist/*.js",
     "src"
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "<%= repository %>"
   },
-  "unpkg": "dist/<%= name %>.js",
+  "unpkg": "dist/<%= filteredName %>.js",
   "keywords": [<% for(var i=0; i<keywords.length; i++) {%>
      "<%= keywords[i] %>"<% if(i<keywords.length-1) {%>,<% } %><% } %>
   ],

@@ -4,6 +4,7 @@ var chalk = require('chalk')
 var rollup = require('rollup')
 var babel = require('rollup-plugin-babel')
 var uglify = require('rollup-plugin-uglify')
+var pluginVue = require('rollup-plugin-vue')
 
 var version = process.env.VERSION || require('../package.json').version
 var author = process.env.VERSION || require('../package.json').author
@@ -19,6 +20,7 @@ var banner =
 rollup.rollup({
     entry: path.resolve(__dirname, '..', 'src/<%= name %>.js'),
     plugins: [
+      pluginVue(),
       babel(),
       uglify()
     ]

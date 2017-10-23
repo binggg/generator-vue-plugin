@@ -1,6 +1,6 @@
 {
   "name": "@xunlei/generator-vue-plugin",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "🚀 一键生成一个 Vue 插件开源项目，Yeoman generator generating vue plugin",
   "homepage": "https://github.com/jeneser/generator-vue-plugin",
   "author": {
